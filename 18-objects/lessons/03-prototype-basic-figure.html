@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <script>
+            'use strict';
+
+            function User(name, role) {
+                this.name = name;
+                this.role = role;
+            }
+
+            User.prototype.whoAmI = function () {
+                console.log(`I'm ${this.name}`);
+            }
+
+            const johnDoe = new User('John Doe', 'user');
+            const janeDoe = new User('Jane Doe', 'admin');
+            console.log(johnDoe, janeDoe);
+            johnDoe.whoAmI();
+            janeDoe.whoAmI();
+
+        </script>
+    </body>
+
+</html>

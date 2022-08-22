@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      'use strict';
+
+      localStorage.setItem('username', JSON.stringify({
+        name: 'John Doe'
+      }));
+      console.log(JSON.parse(localStorage.getItem('username')));
+      console.log(localStorage.key(0));
+      localStorage.clear();
+            // localStorage.removeItem('username');
+
+    </script>
+  </body>
+
+</html>

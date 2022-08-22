@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <script>
+            'use strict';
+
+            const cat = new Promise((resolve) => {
+                setTimeout(() => {
+                    resolve({
+                        sound: 'miau',
+                        loyal: false
+                    })
+                }, 3000)
+            });
+
+            const dog = new Promise((resolve, reject) => {
+                reject('Promise error')
+            });
+
+            Promise
+                .all([cat, dog])
+                //.allSettled([cat, dog])
+                .then((results) => {
+                    const [cat, dog] = results;
+                    console.log(cat, dog)
+                })
+                .catch((error) => {
+                    console.error(error)
+                })
+                .finally(() => console.log('ok'))
+
+        </script>
+    </body>
+
+</html>

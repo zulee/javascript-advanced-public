@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+  </head>
+
+  <body>
+    <h1>What the... hack is THIS?</h1>
+    <ul>
+      <li>A globális kódban a global object, ami böngészőben a window</li>
+      <li>Egy objektum metódusában (közvetlenül) az objektum maga</li>
+      <li>Függvényen belül, strict mód nélkül a global object, ami böngészőben a window </li>
+      <li>Függvényen belül, strict módban undefined </li>
+      <li>Egy eventnél az elem maga, amin az esemény bekövetkezett</li>
+      <li>bind(), call(), apply() metódusoknál bármi</li>
+      <li>contructor függvénynél az objektumpéldány amit létrehozunk a segítségével</li>
+      <li>Az arrow function a parent scopeból örökli a this-t</li>
+    </ul>
+  </body>
+
+</html>

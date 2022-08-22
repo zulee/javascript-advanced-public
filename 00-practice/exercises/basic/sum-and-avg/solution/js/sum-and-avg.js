@@ -1,0 +1,5 @@
+
+export {
+  getSumOfTheElements,
+  getAverageOfTheElements,
+};

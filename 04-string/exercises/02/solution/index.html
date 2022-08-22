@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script type="module">
+      import taggedTemplate from "./js/taggedTemplate.js";
+
+      const user = {
+        firstName: "James",
+        lastName: "Bond",
+        age: "30",
+        nationality: "American",
+      };
+
+      console.log(taggedTemplate`My name is ${user.firstName} ${user.lastName}, and I'm ${user.age} years old. I'm ${user.nationality}.`);
+    </script>
+  </body>
+</html>

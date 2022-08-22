@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      'use strict';
+
+      function* generatorFunction() {
+        try {
+          yield 1;
+        } catch (error) {
+          console.error(error);
+        }
+        yield 2;
+        yield 3;
+      }
+
+      const genratorObject = generatorFunction();
+      console.log(genratorObject.next());
+      console.log(genratorObject.throw(new Error('Custom error')));
+      console.log(genratorObject.next());
+
+    </script>
+  </body>
+
+</html>

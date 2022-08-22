@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <script>
+            // CALLBACK  HELL
+            function addOneTo(number, callback) {
+                let result = number + 1;
+                if (callback) {
+                    setTimeout(function () {
+                        callback(result);
+                    }, 1000)
+                }
+            }
+
+            addOneTo(5, function (res1) {
+                addOneTo(res1, function (res2) {
+                    addOneTo(res2, function (res3) {
+                        addOneTo(res3, function (res4) {
+                            addOneTo(res4, function (res5) {
+                                console.log(res5);
+                            });
+                        });
+                    });
+                });
+            });
+
+        </script>
+    </body>
+
+</html>

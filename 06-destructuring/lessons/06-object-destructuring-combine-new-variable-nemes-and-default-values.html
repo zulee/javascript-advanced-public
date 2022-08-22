@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <script>
+            'use strict';
+
+            const styles = {
+                background: 'white',
+                color: 'red',
+                display: 'block',
+                visibility: 'hidden',
+            }
+
+            const {
+                background: b,
+                color: c = 'blue',
+                display: d,
+                border: bo = '1px solid black'
+            } = styles;
+
+            console.log(b, c, d, bo);
+        </script>
+    </body>
+
+</html>

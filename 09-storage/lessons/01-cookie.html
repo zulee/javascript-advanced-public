@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      'use strict';
+
+      // limitek régen: rfc2109, total: 300 , 20/domain, és max 4K méretűek
+      // most: http://browsercookielimits.squawky.net/
+
+      document.cookie = 'username=John Doe; expires=Fri, 01 Jan 2023 12:00:00 UTC; path=/';
+     // document.cookie = 'username=; expires=Thu, 01 Jan 1970 00:00:00 UTC;';
+
+    </script>
+  </body>
+
+</html>

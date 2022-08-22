@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <script>
+            'use strict';
+
+            const thenable = {
+                age: 30,
+                then(resolve, reject) {
+                    setTimeout(() => resolve(this.age * 2), 1000)
+                }
+            };
+
+            Promise
+                .resolve('Success')
+                .then((result) => {
+                    console.log(result);
+                    return thenable;
+                })
+                .then((value) => console.log(value))
+
+        </script>
+    </body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      'use strict';
+
+
+      function isSuspended(suspendTimeInHours, whenSuspended) {
+        if (!whenSuspended) {
+          return false;
+        }
+        const now = new Date();
+        const elapsedTimeInHours = (now.getTime() - whenSuspended.getTime()) / 1000 / 60 / 60;
+        console.log(elapsedTimeInHours)
+        return !(elapsedTimeInHours > suspendTimeInHours);
+      }
+
+      console.log(isSuspended());
+      console.log(isSuspended(12, new Date('2019-11-19T11:11:11')));
+
+    </script>
+  </body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      'use strict';
+
+      // implicit return
+      const arrowFunction1 = (firstName) => { };
+      console.log(arrowFunction1('John'));
+
+      // explicit return
+      const arrowFunction2 = (firstName) => 'Hello ' + firstName + '!';
+      console.log(arrowFunction2('John'));
+
+      // label
+      const arrowFunction3 = (firstName) => { name: firstName };
+      console.log(arrowFunction3('John'));
+
+      const arrowFunction4 = (firstName) => ({ name: firstName });
+      console.log(arrowFunction4('John'));
+
+      const arrowFunction5 = (firstName) => { return { name: firstName } };
+      console.log(arrowFunction5('John'));
+    </script>
+  </body>
+
+</html>

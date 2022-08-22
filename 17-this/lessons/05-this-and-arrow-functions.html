@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <script>
+            'use strict';
+
+            const user = {
+                firstName: 'John',
+                lastName: 'Doe',
+                speak() {
+                    console.log(this);
+                    const looger = () => {
+                        console.log(this);
+                    };
+                    looger();
+                }
+            };
+
+            user.speak();
+
+            const user2 = {
+                firstName: 'John',
+                lastName: 'Doe',
+                speak() {
+                    const self = this;
+
+                    function looger() {
+                        console.log(self);
+                    };
+                    looger();
+                }
+            };
+
+            user2.speak();
+
+        </script>
+    </body>
+
+</html>

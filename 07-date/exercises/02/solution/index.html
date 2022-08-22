@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Count of working days</title>
+  </head>
+
+  <body>
+    <script type="module">
+      import countOfWorkingDays from "./js/countOfWorkingDays.js";
+
+      const from = new Date(2021, 0, 1)
+      const to = new Date(2021, 9, 28)
+      console.log(countOfWorkingDays(from, to));
+    </script>
+  </body>
+
+</html>

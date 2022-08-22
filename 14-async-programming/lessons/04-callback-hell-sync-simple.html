@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      'use strict';
+
+      function one(args) {
+        console.log('one', args);
+      }
+
+      function two(args) {
+        console.log('two', args);
+      }
+
+      function three(args) {
+        console.log('three', args);
+      }
+
+      function four(args) {
+        console.log('four', args);
+      }
+
+      function five(args) {
+        console.log('five', args);
+      }
+
+      function caller() {
+        one(1);
+        two(2);
+        three(3);
+        four(4);
+        five(5);
+      }
+
+      caller();
+
+    </script>
+  </body>
+
+</html>

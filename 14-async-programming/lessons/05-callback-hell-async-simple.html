@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      'use strict';
+
+      function one(args) {
+        setTimeout(function () {
+          return args * 1;
+        }, 1000);
+      }
+
+      function two(args) {
+        setTimeout(function () {
+          return args * 2;
+        }, 10000);
+      }
+
+      function three(args) {
+        setTimeout(function () {
+          return args * 3;
+        }, 3000);
+      }
+
+      function four(args) {
+        setTimeout(function () {
+          return args * 4;
+        }, 5000);
+      }
+
+      function five(args) {
+        setTimeout(function () {
+          return args * 5;
+        }, 1000);
+      }
+
+      function caller() {
+        var result1 = one(1);
+        var result2 = two(result1);
+        var result3 = three(result2);
+        var result4 = four(result3);
+        var result5 = five(result4);
+        console.log(result5);
+      }
+
+      caller();
+
+    </script>
+  </body>
+
+</html>

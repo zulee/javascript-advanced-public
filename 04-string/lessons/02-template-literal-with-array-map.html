@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+  </head>
+
+  <body>
+
+    <script>
+      'use strict';
+
+      const people = [
+        {
+          firstName: 'John',
+          lastName: 'Doe'
+        },
+        {
+          firstName: 'Jane',
+          lastName: 'Doe'
+        }
+      ];
+
+      const template = `<div>
+                          ${people.map(person => `<p>${person.firstName} ${person.lastName}</p>`).join('')}
+                        </div>`;
+
+      document.body.innerHTML = template;
+            // <div>
+            //     <p>John Doe</p>
+            //     <p>Jane Doe</p>
+            // </div>
+    </script>
+  </body>
+
+</html>

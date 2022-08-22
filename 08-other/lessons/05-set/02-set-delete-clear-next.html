@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <script>
+            'use strict';
+
+            const languages = new Set();
+            languages
+                .add('php')
+                .add('python')
+                .add('perl')
+
+            languages.delete('php');
+            console.log(languages.size);
+            languages.clear();
+            console.log(languages.size);
+
+            languages
+                .add('php')
+                .add('python')
+                .add('perl')
+
+            const values = languages.values();
+            console.log(values.next().value);
+            console.log(values.next());
+            console.log(values.next());
+            console.log(values.next());
+
+        </script>
+    </body>
+
+</html>

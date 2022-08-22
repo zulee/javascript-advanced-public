@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      'use strict';
+
+      // Closure
+
+      function makeCounter() {
+        let counter = 0;
+        return function increaseCounter() {
+          counter += 1;
+          console.log(counter);
+        }
+      }
+
+      const increaseCounter = makeCounter();
+      increaseCounter();
+      increaseCounter();
+      increaseCounter();
+      increaseCounter();
+      increaseCounter();
+      increaseCounter();
+      increaseCounter();
+
+      console.log('-------- curly ---------');
+      makeCounter()();
+    </script>
+  </body>
+
+</html>
