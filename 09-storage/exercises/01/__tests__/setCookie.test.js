@@ -6,6 +6,7 @@ import setCookie from '../solution/js/setCookie';
 global.Date = jest.fn(() => 'Fri Jan 21 2022 21:31:27 GMT+0100 (Central European Standard Time)');
 global.Date.now = jest.fn(() => 1642796187014);
 global.Date.getTime = jest.fn(() => 1642796187014);
+global.Date.prototype.toUTCString = jest.fn(() => 'Fri Jan 21 2022 21:16:27 GMT+0100 (Central European Standard Time)');
 
 describe('setCookie ', () => {
   beforeEach(() => {
