@@ -1,8 +1,10 @@
 # Feladatok
 
-1. Írj egy `setCookie` nevű függvényt, ami a paraméterként kapott stringet eltárolja
-egy `token` nevű sütiben, ami 15 perc után lejár!
 
+1. Írj egy `setCookie` nevű függvényt, ami a paraméterként kapott stringet eltárolja
+egy `token` nevű sütiben, ami 15 perc után lejár!  
+A feladatok megoldás során csak a `Date` konstruktor függvényt használható `new` kulcsszóval és anélkül, valamint a  
+`now()`, `getTime()` és a `toUTCSting()` metódusok!
    
 2. Készíts egy `cookieHandler` nevű objectet, az alábbi három metódust megvalósítja:
 - `getAll`: kiolvassa a sütik nevét és értékét, majd visszaadja őket egy objektumban, ahol a sütik neve a key és az értéke a value (pl. { viewed: 5 })
