@@ -6,7 +6,7 @@ function binarySearch(arr, nr2find, d = 0)
     if ((arr.length === 0) || (d > 10)) return false;
     if (arr.length === 1) return arr[0] === nr2find;
 
-    const arrSplitPoint = Math.round((arr.length-1) / 2);
+    const arrSplitPoint = Math.floor((arr.length) / 2);
     const examinedItem = arr[arrSplitPoint];
     console.log(examinedItem);
 
